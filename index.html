@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calorie Calculator</title>
+</head>
+<body>
+    <div class="wrapper" id="bmr-calculator">
+        <div class="calculator">
+            <div class="genders">
+                <div class="controls">
+                    <input type="radio" name="gender" value="male" id="calc-gender-male" checked="">
+                    <label for="calc-gender-male">Male</label>
+                </div>
+                <div class="controls">
+                    <input type="radio" name="gender" value="female" checked="" id="calc-gender-female">
+                    <label for="calc-gender-female">Female</label>
+                </div>
+            </div>
+            <label for="calc-age" id="calc-age_value">Age: 24</label>
+            <input type="range" id="calc-age" value="24" min="13" max="100">
+            <label for="calc-height" id="calc-height_value">Height: 172.72 cm</label>
+            <input type="range" value="172.72" min="80" max="250" id="calc-height">
+            <label for="calc-weight" id="calc-weight_value">Weight: 81kg</label>
+            <input type="range" id="calc-weight" min="40" max="200" value="81">
+            <label for="calc-walking" id="calc-walking_value">Walking: 1 hour per week</label>
+            <input type="range" id="calc-walking" value="1" min="0" max="50">
+            <label for="calc-cardio" id="calc-cardio_value">Cardio: 1 hour per week</label>
+            <input type="range" id="calc-cardio" min="0" max="50" value="1">
+        </div>
+        <div class="results">
+            <div class="calc-target-gain">
+                To Gain Weight: <br>
+                <span>2500 calories</span>
+            </div>
+            <div class="calc-target-maintain">
+                To Maintain Weight: <br>
+                <span>2300 calories</span>
+            </div>
+            <div class="calc-target-lose">
+                To Lose Weight: <br>
+                <span>1900 calories</span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="converter">
+        <label id="lbs-converter" for="lbs-input">Enter weight in pounds:</label>
+        <input type="number" id="lbs-input">
+        <button id="lbs-btn">Convert</button>
+        <p id="lbs-result"></p>
+    </div>
+
+    <div class="converter">
+        <label id="ft-converter" for="ft-input">Enter height in feet and inches:</label>
+        <input type="text" id="ft-input">
+        <button id="ft-btn">Convert</button>
+        <p id="ft-result"></p>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
